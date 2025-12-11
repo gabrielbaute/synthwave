@@ -1,0 +1,11 @@
+venv/
+
+# caché
+__pycache__/
+*.pyc
+
+# output
+output/
+*.mp3
+*.m4a
+*.mp4
