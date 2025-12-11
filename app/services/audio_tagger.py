@@ -15,6 +15,14 @@ class MutagenTagger:
         self.logger = logging.getLogger(self.__class__.__name__)
 
     def _add_cover_to_mp3(self, audio: ID3,  track: Track, file_path: str):
+        """
+        Add image cover to mp3 file
+
+        Args:
+            audio (ID3): audiofile object
+            track (Track): metadata from the track object
+            file_path (str): path to the audiofile
+        """
         try:
             self.logger.info(f"Adding cover to: {track.title}")
             with open(self.cover, "rb") as img:
@@ -31,6 +39,14 @@ class MutagenTagger:
             self.logger.error(f"Error adding cover to {track.title}: {e}")
 
     def tag_mp3(self, file_path: str, track: Track, index: int):
+        """
+        Add metadata to mp3 file
+
+        Args:
+            file_path (str): path to the audiofile
+            track (Track): metadata from the track object
+            index (int): position of track in tracklist
+        """
         audio = ID3(file_path)
         audio.add(TIT2(encoding=3, text=track.title))
         audio.add(TALB(encoding=3, text=self.album))
@@ -51,6 +67,14 @@ class MutagenTagger:
         self.logger.info(f"Tagged MP3: {file_path}")
 
     def tag_m4a(self, file_path: str, track: Track, index: int):
+        """
+        Add metadata to m4a file
+
+        Args:
+            file_path (str): path to the audiofile
+            track (Track): metadata from the track object
+            index (int): position of track in tracklist
+        """
         audio = MP4(file_path)
         audio["\xa9nam"] = track.title
         audio["\xa9alb"] = self.album
@@ -71,6 +95,13 @@ class MutagenTagger:
         self.logger.info(f"Tagged M4A: {file_path}")
 
     def tag_all(self, files: List[str], tracklist: TrackList):
+        """
+        Tag all files in the output directory
+
+        Args:
+            files (List): List of filepaths
+            tracklist (Tracklist): Tracklist object with all tracks
+        """
         for i, (file_path, track) in enumerate(zip(files, tracklist.tracks), start=1):
             if file_path.endswith(".mp3"):
                 self.tag_mp3(file_path, track, i)
