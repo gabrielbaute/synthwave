@@ -9,3 +9,11 @@ output/
 *.mp3
 *.m4a
 *.mp4
+
+# Image
+*.png
+*.jpg
+*.jpeg
+
+# texto
+*.txt
