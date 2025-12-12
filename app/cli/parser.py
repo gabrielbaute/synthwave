@@ -25,6 +25,27 @@ def generate_parser():
     split_parser.add_argument("--cover", help="Path to cover image (jpg/png)")
 
     # -------------------------------------------
+    # Subcomando: download
+    # -------------------------------------------
+    download_parser = subparsers.add_parser("download", help="Download audio from YouTube")
+    download_parser.add_argument("url", help="YouTube video URL")
+    download_parser.add_argument("--output", default="downloads", help="Output directory")
+    download_parser.add_argument(
+        "--format",
+        choices=["mp3", "m4a"],
+        default="mp3",
+        help="Audio format to export (mp3 or m4a)"
+    )
+
+    # -------------------------------------------
+    # Subcomando: clean
+    # -------------------------------------------
+    clean_parser = subparsers.add_parser("clean", help="Clean download directory")
+    clean_parser.add_argument("--output", default="downloads", help="Target directory to clean")
+    clean_parser.add_argument("--all", action="store_true", help="Remove entire directory contents")
+
+
+    # -------------------------------------------
     # Subcomando: version
     # -------------------------------------------
     subparsers.add_parser("version", help="Show version information")
