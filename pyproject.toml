@@ -6,15 +6,30 @@ authors = ["Gabriel Baute <gabrielbaute@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/gabrielbaute/synthwave"
+homepage = "https://github.com/gabrielbaute/synthwave"
+keywords = ["cli", "youtube", "audio", "splitter", "synthwave", "mutagen", "yt-dlp"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Utilities"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-yt-dlp = "^2025.1.1"
+yt-dlp = "^2025.12.8"
 mutagen = "^1.47.0"
-rich = "^13.9.0"
+rich = "^14.2.0"
+pillow = "^12.0.0"
+pydantic = "^2.12.5"
+
+[tool.poetry.extras]
+ffmpeg = ["system dependency: ffmpeg must be installed"]
 
 [tool.poetry.scripts]
-synth = "app.cli.cli:main"
+synth = "app.__main__:main"
 
 [build-system]
 requires = ["poetry-core"]
