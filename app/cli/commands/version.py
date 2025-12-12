@@ -6,7 +6,7 @@ __version__ = "0.0.0"
 def run():
     console = Console()
     table = Table(
-        title="[bold magenta]m4b-converter[/bold magenta]",
+        title="[bold magenta]synthwave[/bold magenta]",
         show_header=False,
         border_style="blue",
         padding=(0, 2),
@@ -18,6 +18,6 @@ def run():
     table.add_row("Versión", f"[bold]{__version__}[/bold]")
     table.add_row("Autor", "Gabriel Baute")
     table.add_row("Licencia", "MIT")
-    table.add_row("Repo", "https://github.com/gabrielbaute/youtube_audio_splitter")
+    table.add_row("Repo", "https://github.com/gabrielbaute/synthwave")
 
     console.print(table)
