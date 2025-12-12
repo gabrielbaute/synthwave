@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "synthwave"
+version = "0.0.0"
+description = "CLI tool to split YouTube audio compilations into tracks with metadata and cover art"
+authors = ["Gabriel Baute <gabrielbaute@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/gabrielbaute/synthwave"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+yt-dlp = "^2025.1.1"
+mutagen = "^1.47.0"
+rich = "^13.9.0"
+
+[tool.poetry.scripts]
+synth = "app.cli.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
