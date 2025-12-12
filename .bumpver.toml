@@ -12,9 +12,9 @@ tag_scope = "global"
 "pyproject.toml" = [
     'version = "{version}"'
 ]
-"app/__init__.py" = [
+"synthwave/__init__.py" = [
     '__version__ = "{version}"'
 ]
-"app/cli/commands/version.py" = [
+"synthwave/cli/commands/version.py" = [
     '__version__ = "{version}"'
 ]
