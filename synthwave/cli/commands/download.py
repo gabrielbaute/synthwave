@@ -3,7 +3,7 @@ import logging
 import os
 from rich.console import Console
 from rich.table import Table
-from app.services.image_utils import make_square_cover
+from synthwave.services.image_utils import make_square_cover
 
 console = Console()
 

@@ -1,5 +1,5 @@
-from app.cli.parser import generate_parser
-from app.cli.commands import split, version, download, clean, check
+from synthwave.cli.parser import generate_parser
+from synthwave.cli.commands import split, version, download, clean, check
 
 def main():
     parser = generate_parser()

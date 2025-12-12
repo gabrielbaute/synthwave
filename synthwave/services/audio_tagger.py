@@ -3,7 +3,7 @@ from typing import List
 from mutagen.easyid3 import EasyID3
 from mutagen.id3 import ID3, TIT2, TALB, TPE1, TRCK, APIC, TDRC, TCON
 from mutagen.mp4 import MP4, MP4Cover
-from app.schemas import TrackList, Track
+from synthwave.schemas import TrackList, Track
 
 class MutagenTagger:
     def __init__(self, album: str = "Unknown Album", artist: str = "Unknown Artist", year: int = None, genre: str = None, cover: str = None):

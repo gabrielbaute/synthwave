@@ -1,7 +1,7 @@
 import re
 import logging
 from typing import List, Optional
-from app.schemas import Track, TrackList
+from synthwave.schemas import Track, TrackList
 
 class TrackListParser:
     def __init__(self, file_path: str):

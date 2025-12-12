@@ -1,5 +1,5 @@
 import logging
-from app.services import TrackListParser
+from synthwave.services import TrackListParser
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 

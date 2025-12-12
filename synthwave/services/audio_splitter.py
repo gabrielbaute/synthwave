@@ -2,7 +2,7 @@ import os
 import subprocess
 import logging
 from typing import List, Optional
-from app.schemas import TrackList, Track
+from synthwave.schemas import TrackList, Track
 
 class FFmpegSplitter:
     def __init__(self, input_file: str, output_dir: str = "output"):

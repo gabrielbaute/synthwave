@@ -1,7 +1,7 @@
 import logging
 from rich.console import Console
 from rich.table import Table
-from app.services import TrackListParser, FFmpegSplitter, MutagenTagger
+from synthwave.services import TrackListParser, FFmpegSplitter, MutagenTagger
 
 console = Console()
 

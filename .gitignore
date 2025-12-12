@@ -19,3 +19,10 @@ downloads/
 
 # Tracklist
 tracklist.txt
+
+# dist
+dist/
+*.gz
+*.tar
+*.tar.gz
+*.whl
