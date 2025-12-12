@@ -16,5 +16,5 @@ tag_scope = "global"
     '__version__ = "{version}"'
 ]
 "app/cli/commands/version.py" = [
-    '__version__ = "{versiom}"'
+    '__version__ = "{version}"'
 ]
