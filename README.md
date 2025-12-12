@@ -40,7 +40,7 @@ Ejemplo de salida:
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃                   Dependency Check                            ┃
 ┡━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
-│   Dependency  │    Status     │          Description           │
+│   Dependency  │    Status     │          Description          │
 ├───────────────┼───────────────┼───────────────────────────────┤
 │      ffmpeg   │ ✓ Installed   │ Required for audio conversion │
 │      yt-dlp   │ ✓ Installed   │ Required for downloading      │
