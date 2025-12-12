@@ -15,5 +15,5 @@ output/
 *.jpg
 *.jpeg
 
-# texto
-*.txt
+# Tracklist
+tracklist.txt
