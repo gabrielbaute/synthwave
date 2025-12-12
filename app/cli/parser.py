@@ -46,6 +46,11 @@ def generate_parser():
 
 
     # -------------------------------------------
+    # Subcomando: check
+    # -------------------------------------------
+    subparsers.add_parser("check", help="Check dependencies requiered for the CLI")
+
+    # -------------------------------------------
     # Subcomando: version
     # -------------------------------------------
     subparsers.add_parser("version", help="Show version information")
