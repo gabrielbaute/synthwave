@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "synthwave"
-version = "0.0.0"
+version = "0.1.0"
 description = "CLI tool to split YouTube audio compilations into tracks with metadata and cover art"
 authors = ["Gabriel Baute <gabrielbaute@gmail.com>"]
 license = "MIT"
