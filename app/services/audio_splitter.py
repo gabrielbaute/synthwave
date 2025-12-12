@@ -51,7 +51,7 @@ class FFmpegSplitter:
         output_path = os.path.join(self.output_dir, filename)
 
         cmd = self._ffmpeg_command(track, output_path)
-        self.logger.info(f"Exporting: {output_path}")
+        self.logger.debug(f"Exporting: {output_path}")
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
         if result.returncode != 0:

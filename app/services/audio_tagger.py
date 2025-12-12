@@ -24,7 +24,7 @@ class MutagenTagger:
             file_path (str): path to the audiofile
         """
         try:
-            self.logger.info(f"Adding cover to: {track.title}")
+            self.logger.debug(f"Adding cover to: {track.title}")
             with open(self.cover, "rb") as img:
                 audio.add(APIC(
                     encoding=3,
@@ -64,7 +64,7 @@ class MutagenTagger:
         if self.cover:
             self._add_cover_to_mp3(audio, track, file_path)
 
-        self.logger.info(f"Tagged MP3: {file_path}")
+        self.logger.debug(f"Tagged MP3: {file_path}")
 
     def tag_m4a(self, file_path: str, track: Track, index: int):
         """
@@ -92,7 +92,7 @@ class MutagenTagger:
                 audio["covr"] = [MP4Cover(img.read(), imageformat=MP4Cover.FORMAT_JPEG)]
 
         audio.save()
-        self.logger.info(f"Tagged M4A: {file_path}")
+        self.logger.debug(f"Tagged M4A: {file_path}")
 
     def tag_all(self, files: List[str], tracklist: TrackList):
         """
@@ -102,8 +102,9 @@ class MutagenTagger:
             files (List): List of filepaths
             tracklist (Tracklist): Tracklist object with all tracks
         """
+        self.logger.info(f"Tagging files... {len(files)} files to tag")
         for i, (file_path, track) in enumerate(zip(files, tracklist.tracks), start=1):
             if file_path.endswith(".mp3"):
                 self.tag_mp3(file_path, track, i)
             elif file_path.endswith(".m4a"):
-                self.tag_m4a(file_path, track, i)
+                self.tag_m4a(file_path, track, i)        
